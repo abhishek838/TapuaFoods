@@ -1,0 +1,213 @@
+.our-range-section {
+  padding: 5.5rem 0;
+  background-color: #FFFFFF;
+}
+
+.section-header-centered {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 3.5rem auto;
+}
+
+.range-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--accent-terracotta, #D9632A);
+  margin-bottom: 0.75rem;
+}
+
+.eyebrow-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--accent-terracotta, #D9632A);
+}
+
+.range-title {
+  font-family: var(--font-heading, 'Playfair Display', serif);
+  font-size: 2.75rem;
+  font-weight: 700;
+  color: #123838;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.range-subtitle {
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: #556B6B;
+}
+
+/* Range Grid */
+.range-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.range-card {
+  background: #FAF7F2;
+  border-radius: var(--radius-lg, 12px);
+  overflow: hidden;
+  border: 1px solid rgba(19, 75, 76, 0.08);
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--transition-normal, 0.3s ease), box-shadow var(--transition-normal, 0.3s ease);
+}
+
+.range-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px rgba(19, 75, 76, 0.08);
+}
+
+.range-card-media {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  background-color: #F0EAE1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.range-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow, 0.5s ease);
+}
+
+.range-card:hover .range-card-img {
+  transform: scale(1.05);
+}
+
+/* Specific framing for product packages so the entire pouch and logo fit with zero cropping */
+.range-card-media.media-contain {
+  background: radial-gradient(circle at center, #FFFFFF 0%, #F6F1EA 100%);
+  padding: 1.25rem 1rem;
+}
+
+.range-card-media.media-contain .range-card-img,
+.range-card-img.img-contain {
+  width: auto;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 10px 22px rgba(19, 75, 76, 0.12));
+}
+
+.range-card:hover .range-card-img.img-contain {
+  transform: scale(1.06) translateY(-2px);
+}
+
+.range-status-badge {
+  position: absolute;
+  top: 0.85rem;
+  right: 0.85rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.32rem 0.8rem;
+  border-radius: var(--radius-full, 9999px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.14);
+  z-index: 3;
+}
+
+.badge-available {
+  background: #134B4C;
+  color: #FFFFFF;
+}
+
+.badge-coming-soon {
+  background: #D9632A;
+  color: #FFFFFF;
+}
+
+.range-card-body {
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.range-card-top {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 0.65rem;
+}
+
+.range-card-title {
+  font-family: var(--font-heading, 'Playfair Display', serif);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #123838;
+}
+
+.range-card-count {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #7D8E8E;
+}
+
+.range-card-desc {
+  font-size: 0.92rem;
+  color: #556B6B;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  flex: 1;
+}
+
+.range-card-footer {
+  margin-top: auto;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(19, 75, 76, 0.08);
+}
+
+.range-explore-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: #134B4C;
+  font-weight: 700;
+  font-size: 0.88rem;
+  text-decoration: none;
+  transition: color var(--transition-fast, 0.2s ease), transform var(--transition-fast, 0.2s ease);
+}
+
+.range-explore-btn:hover {
+  color: #D9632A;
+  transform: translateX(4px);
+}
+
+.range-launching-tag {
+  font-size: 0.82rem;
+  font-style: italic;
+  color: #A08060;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .range-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .range-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .range-title {
+    font-size: 2.15rem;
+  }
+}

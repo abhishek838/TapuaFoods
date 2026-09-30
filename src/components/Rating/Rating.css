@@ -1,0 +1,42 @@
+.product-rating {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.85rem;
+}
+
+.stars-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1.5px;
+}
+
+.star-icon {
+  transition: transform var(--transition-fast);
+}
+
+.star-icon.filled {
+  color: #F59E0B;
+  fill: #F59E0B;
+}
+
+.star-icon.half {
+  color: #F59E0B;
+  fill: url(#half-grad);
+}
+
+.star-icon.empty {
+  color: #D1D5DB;
+  fill: transparent;
+}
+
+.rating-score {
+  font-weight: 700;
+  color: var(--color-text-main);
+  font-size: 0.84rem;
+}
+
+.rating-count {
+  color: var(--color-text-muted);
+  font-size: 0.78rem;
+}
